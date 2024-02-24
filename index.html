@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script> 
+</head>
+<body>
+    <div class="container">
+        <div class="form-wrap">
+
+            <h2 id="heading">Get Started</h2>
+            <form name="f1" action="success.html">
+                <div id="form-group" >
+                    <label for="username">Username</lable><br>
+                        <i class="fa-solid fa-user"></i>
+                    <input type="text" name="uname" id="username" placeholder="Ram Wagh" onblur="fun1()" required/>
+                    <div class="error-message" id="unameerror"></div>
+                </div>
+                <div id="form-group">
+                    <label for="mailID">Email</lable><br>
+                        <i class="fa-regular fa-envelope"></i>
+                    <input type="mail" name="mail" id="mailid" placeholder="abc123@gmail.com" onblur="fun2()" required/>
+                    <div class="error-message" id="mailerror"></div>
+                </div>
+
+                <div id="form-group">
+                    <label for="password">Password</lable><br>
+                        <i class="fa-solid fa-lock"></i>
+                    <input type="password" name="password" id="password" placeholder="password here" onblur="fun3()" required />
+                    <div class="error-message" id="passerror"></div>
+                </div>
+
+                <div id="form-group">
+                    <label for="cpassword">Confirm Password</lable><br>
+                        <i class="fa-solid fa-lock"></i>
+                    <input type="password" name="cpassword" id="cpassword" placeholder="confirm password " onblur="fun4()" required />
+                    <div class="error-message" id="cpasserror"></div>
+                </div>
+
+                <div id="login">
+                    <button type="submit" onclick="validateform()">Submit</button> <br>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</body>
+
+</html>
+<script src="main.js"></script> 

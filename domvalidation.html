@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="validation.css">
+    <script>
+        //user name : 
+        // mobile Number : var num = '(^[789]{1,1})+([0-9]{9,9})$'
+        // emailid : var email = '(^[a-z]{1,1})+([a-z0-9]{0,9})+([._]{0,1})([a-z0-9]{1,19})+([@]{1,1})([a-z]{2,19})+([.]{1,1})(com|co.in|usa|fr)$';
+        // enter password
+        // confirm password
+        // radio button
+
+        function fun()
+        {
+            var pattern = '(^[A-Z]{1,1})+([A-Za-z$@]{1,10})$';
+            var uname = f1.uname.value;
+            if(uname.match(pattern))
+            {
+                // error.innerHTML="<h4 style='color:green'>User name is correct</h4>";
+                f1.uname.style.border="2px solid green";
+                error.innerHTML="<img src='correct.png' width='30px' height='30px'>";
+            }
+            else
+            {
+                // error.innerHTML="<h4 style='color:red'>User name is wrong</h4>";
+                error.innerHTML="<img src='wrong.png' width='30px' height='30px'>";
+                // var p = document.getElementById("uname");
+                // p.uname.style.border="2px solid red";
+                f1.uname.style.border="2px solid red";
+                f1.uname.value="";
+                f1.uname.focus();
+            }
+        }
+        function fun1()
+        {
+            var num = '(^[789]{1,1})+([0-9]{9,9})$';
+            var mobn = f1.mobn.value;
+            if(mobn.match(num))
+            {
+                // error1.innerHTML="<h4 style='color:green'>Mobile number is correct</h4>";
+                error1.innerHTML="<img src='correct.png' width='30px' height='30px'>";
+                f1.mobn.style.border="2px solid green";
+            }
+            else
+            {
+                // error1.innerHTML="<h4 style='color:red'>Mobile number is wrong</h4>";
+                error1.innerHTML="<img src='wrong.png' width='30px' height='30px'>";
+                f1.mobn.style.border="2px solid red";
+                f1.mobn.value="";
+                f1.mobn.focus();
+            }
+        }
+        function fun2()
+        {
+            var mailID = '(^[a-z]{1,1})+([a-z0-9]{0,9})+([._]{0,1})([a-z0-9]{1,19})+([@]{1,1})([a-z]{2,19})+([.]{1,1})(com|co.in|usa|fr)$';
+            var mail = f1.mail.value;
+            if(mail.match(mailID))
+            {
+                // error1.innerHTML="<h4 style='color:green'>Mobile number is correct</h4>";
+                error2.innerHTML="<img src='correct.png' width='30px' height='30px'>";
+                f1.mail.style.border="2px solid green";
+            }
+            else
+            {
+                // error1.innerHTML="<h4 style='color:red'>Mobile number is wrong</h4>";
+                error2.innerHTML="<img src='wrong.png' width='30px' height='30px'>";
+                f1.mail.style.border="2px solid red";
+                f1.mail.value="";
+                f1.mail.focus();
+            }
+        }
+
+        // function fun3()
+        // {
+        //     var ager= '(^[^0-9]$)';
+        //     var age = f1.age.value;
+        //     if(age.match(ager))
+        //     {
+        //         // error1.innerHTML="<h4 style='color:green'>Mobile number is correct</h4>";
+        //         error3.innerHTML="<img src='correct.png' width='30px' height='30px'>";
+        //         f1.age.style.border="2px solid green";
+        //     }
+        //     else
+        //     {
+        //         // error1.innerHTML="<h4 style='color:red'>Mobile number is wrong</h4>";
+        //         error3.innerHTML="<img src='wrong.png' width='30px' height='30px'>";
+        //         f1.age.style.border="2px solid red";
+        //         f1.age.value="";
+        //         f1.age.focus();
+        //     }
+        // }
+        function fun4()
+        {
+            // var password= '(^[A-Z]{1,1})+([a-z0-9]{1,8})$';
+            var pattern = '(^[a-zA-Z0-9@#$%&*]{2,9})+([@#$%*]{1,1})+([a-zA-z0-9@#$%&*]{3,10})$';
+            var pass = f1.password.value;
+            if(pass.match(pattern))
+            {
+                //error4.innerHTML="<h4 style='color:green'>User name is correct</h4>";
+                error4.innerHTML="<img src='correct.png' width='30px' height='30px'>";
+                f1.pass.style.border="2px solid green";
+            }
+            else
+            {
+                // error1.innerHTML="<h4 style='color:red'>Mobile number is wrong</h4>";
+                error4.innerHTML="<img src='wrong.png' width='30px' height='30px'>";
+                f1.pass.style.border="2px solid red";
+                f1.pass.value="";
+                f1.pass.focus();
+            }
+        }
+
+        function fun5()
+        {
+            var pass = f1.password.value;
+            var cpass = f1.cpassword.value;
+            if(cpass.match(pass))
+            {
+                //error4.innerHTML="<h4 style='color:green'>User name is correct</h4>";
+                error5.innerHTML="<img src='correct.png' width='30px' height='30px'>";
+                c.innerHTML="";
+                f1.cpass.style.border="2px solid green";
+            }
+            else
+            {
+                // error1.innerHTML="<h4 style='color:red'>Mobile number is wrong</h4>";
+                error5.innerHTML="<img src='wrong.png' width='30px' height='30px'>";
+                f1.cpass.style.border="2px solid red";
+                f1.cpass.value="";
+                c.innerHTML="<p style='color:red'>Password and confirm password doesn't match";
+                f1.cpass.focus();
+            }
+        }
+
+        function submit1()
+        {
+
+        }
+
+    </script>
+</head>
+<body style="margin: auto;">
+    <form name="f1"class="fo" action="success.html">
+        <table>
+            <tr>
+                <td>Enter your name :- </td>
+                <td><input type="text" name="uname" id="p" onblur="fun()"required></td>
+                <td id="error"></td>
+            </tr>
+
+            <tr>
+                <td>Enter Mobile Number :-</td>
+                <td><input type="text" name="mobn" onblur="fun1()" required></td>
+                <td id="error1"></td>
+            </tr>
+
+            <tr>
+                <td>Enter Mail ID :-</td>
+                <td><input type="text" name="mail" onblur="fun2()" required ></td>
+                <td id="error2"></td>
+            </tr>
+
+            <!-- <tr>
+                <td>Enter Age</td>
+                <td><input type="text" name="age" onblur="fun3()"></td>
+                <td id="error3"></td>
+            </tr> -->
+
+            <tr>
+                <td>Enter password :-</td>
+                <td><input type="password" name="password" onblur="fun4()" required><br>
+                <span style="color: red; font-size: small; font-family: Arial, Helvetica, sans-serif;" id="c1" > 
+                    <li>First letter Must be Uppercase</li>
+                    <li>It must contain small letters</li>
+                    <li>It must contain numbers</li>
+                    <li>t must contain 2 Special symbol</li>
+
+                </span></td>
+                <td id="error4"></td>
+            </tr>
+
+            <tr>
+                <td>Confirm password :-</td>
+                <td><input type="password" name="cpassword" onblur="fun5()"required><br><span id="c"></span></td>
+                <td id="error5"></td>
+            </tr>
+
+            <tr>
+                <td>Gender :- </td>
+                <td><input type="radio" name="gen" value="male" required>Male
+                <input type="radio" name="gen" value="female" required>female</td>
+            </tr>
+            <tr><td>Select city :-</td>
+                <td>
+                    <!-- <label for="city">Slect city</label> -->
+                    <select name="city" id="city" required>
+                        <option value="pune">select</option>
+                        <option value="pune">Pune</option>
+                        <option value="Sambhajinagar">Sambhajinagar</option>
+                        <option value="jalna">Jalna</option>
+                        <option value="thane">Thane</option>
+                        <option value="satara">Satara</option>
+                        <option value="hingoli">Hingoli</option>
+                        <option value="nanded">Nanded</option>
+                        <option value="raigad">Raigad</option>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="akola">Akola</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Note :-</td>
+                <td>
+                    <input type="checkbox" name="check" value="details" required>
+                    <label for="check">You have enter correct details</label><br>
+                    <input type="checkbox" name="check1" value="ensure"required>
+                    <label for="check1">Ensure you have fill all details</label>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="submit" onsubmit="submit1()"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+<script>
+    //user name : 
+    // mobile Number : var num = '(^[789]{1,1})+([0-9]{9,9})$'
+    // emailid : var email = '(^[a-z]{1,1})+([a-z0-9]{0,9})+([._]{0,1})([a-z0-9]{1,19})+([@]{1,1})([a-z]{2,19})+([.]{1,1})(com|co.in|usa|fr)$';
+    // enter password
+    // confirm password
+    // radio button
+
+    // function fun()
+    // {
+    //     var pattern = '(^[A-Z]{1,1})+([A-Za-z$@]{1,10})$';
+    //     var uname = f1.uname.value;
+    //     if(uname.match(pattern))
+    //     {
+    //         // error.innerHTML="<h4 style='color:green'>User name is correct</h4>";
+    //         f1.uname.style.border="2px solid green";
+    //         error.innerHTML="<img src='correct.png' width='30px' height='30px'>";
+    //     }
+    //     else
+    //     {
+    //         // error.innerHTML="<h4 style='color:red'>User name is wrong</h4>";
+    //         error.innerHTML="<img src='wrong.png' width='30px' height='30px'>";
+    //         // var p = document.getElementById("uname");
+    //         // p.uname.style.border="2px solid red";
+    //         f1.uname.style.border="2px solid red";
+    //         f1.uname.value="";
+    //         f1.uname.focus();
+    //     }
+    // }
+    // function fun1()
+    // {
+    //     var num = '(^[789]{1,1})+([0-9]{9,9})$';
+    //     var mobn = f1.mobn.value;
+    //     if(mobn.match(num))
+    //     {
+    //         // error1.innerHTML="<h4 style='color:green'>Mobile number is correct</h4>";
+    //         error1.innerHTML="<img src='correct.png' width='30px' height='30px'>";
+    //         f1.mobn.style.border="2px solid green";
+    //     }
+    //     else
+    //     {
+    //         // error1.innerHTML="<h4 style='color:red'>Mobile number is wrong</h4>";
+    //         error1.innerHTML="<img src='wrong.png' width='30px' height='30px'>";
+    //         f1.mobn.style.border="2px solid red";
+    //         f1.mobn.value="";
+    //         f1.mobn.focus();
+    //     }
+    // }
+    // function fun2()
+    // {
+    //     var mailID = '(^[a-z]{1,1})+([a-z0-9]{0,9})+([._]{0,1})([a-z0-9]{1,19})+([@]{1,1})([a-z]{2,19})+([.]{1,1})(com|co.in|usa|fr)$';
+    //     var mail = f1.mail.value;
+    //     if(mail.match(mailID))
+    //     {
+    //         // error1.innerHTML="<h4 style='color:green'>Mobile number is correct</h4>";
+    //         error2.innerHTML="<img src='correct.png' width='30px' height='30px'>";
+    //         f1.mail.style.border="2px solid green";
+    //     }
+    //     else
+    //     {
+    //         // error1.innerHTML="<h4 style='color:red'>Mobile number is wrong</h4>";
+    //         error2.innerHTML="<img src='wrong.png' width='30px' height='30px'>";
+    //         f1.mail.style.border="2px solid red";
+    //         f1.mail.value="";
+    //         f1.mail.focus();
+    //     }
+    // }
+
+    // function fun3()
+    // {
+    //     var ager= '(^[^0-9]$)';
+    //     var age = f1.age.value;
+    //     if(age.match(ager))
+    //     {
+    //         // error1.innerHTML="<h4 style='color:green'>Mobile number is correct</h4>";
+    //         error3.innerHTML="<img src='correct.png' width='30px' height='30px'>";
+    //         f1.age.style.border="2px solid green";
+    //     }
+    //     else
+    //     {
+    //         // error1.innerHTML="<h4 style='color:red'>Mobile number is wrong</h4>";
+    //         error3.innerHTML="<img src='wrong.png' width='30px' height='30px'>";
+    //         f1.age.style.border="2px solid red";
+    //         f1.age.value="";
+    //         f1.age.focus();
+    //     }
+    // }
+    // function fun4()
+    // {
+    //     // var password= '(^[A-Z]{1,1})+([a-z0-9]{1,8})$';
+    //     var pattern = '(^[a-zA-Z0-9@#$%&*]{2,9})+([@#$%*]{1,1})+([a-zA-z0-9@#$%&*]{3,10})$';
+    //     var pass = f1.password.value;
+    //     if(pass.match(pattern))
+    //     {
+    //         //error4.innerHTML="<h4 style='color:green'>User name is correct</h4>";
+    //         error4.innerHTML="<img src='correct.png' width='30px' height='30px'>";
+    //         f1.pass.style.border="2px solid green";
+    //     }
+    //     else
+    //     {
+    //         // error1.innerHTML="<h4 style='color:red'>Mobile number is wrong</h4>";
+    //         error4.innerHTML="<img src='wrong.png' width='30px' height='30px'>";
+    //         f1.pass.style.border="2px solid red";
+    //         f1.pass.value="";
+    //         f1.pass.focus();
+    //     }
+    // }
+
+    // function fun5()
+    // {
+    //     var pass = f1.password.value;
+    //     var cpass = f1.cpassword.value;
+    //     if(cpass.match(pass))
+    //     {
+    //         //error4.innerHTML="<h4 style='color:green'>User name is correct</h4>";
+    //         error5.innerHTML="<img src='correct.png' width='30px' height='30px'>";
+    //         c.innerHTML="";
+    //         f1.cpass.style.border="2px solid green";
+    //     }
+    //     else
+    //     {
+    //         // error1.innerHTML="<h4 style='color:red'>Mobile number is wrong</h4>";
+    //         error5.innerHTML="<img src='wrong.png' width='30px' height='30px'>";
+    //         f1.cpass.style.border="2px solid red";
+    //         f1.cpass.value="";
+    //         c.innerHTML="<p style='color:red'>Password and confirm password doesn't match";
+    //         f1.cpass.focus();
+    //     }
+    // }
+
+    // function submit1()
+    // {
+
+    // }
+
+</script>
+</html>
